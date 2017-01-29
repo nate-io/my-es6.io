@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow functions → → </title>
+</head>
+<body>
+<script>
+  const names = ['wes', 'kait', 'lux'];
+
+  // normal function call
+  const fullNames = names.map(function(name) {
+  	return `${name} bos`;
+  });
+
+  // 'fat arrow' function
+  const fullNames2 = names.map((name) => {
+  	return `${name} bos`;
+  });
+  
+  // if only one param the parens around params are optional
+  const fullNames3 = names.map(name => {
+  	return `${name} bos`;
+  });
+
+  // implicit return - since we are reutrning only one item
+  // can dump the curly brackets and return keyword
+  const fullNames4 = names.map(name => `${name} bos`);
+
+  // no params require empty parens
+  const fullNames5 = names.map(() => `cool bos`);
+
+  console.log(fullNames5);
+
+  // anonymity - arrow functions are anonymous  
+  // however, arrow functions can be assigned to variables to name
+  const sayMyName = (name) => { alert(`Hello, ${name}!`) }
+  // exec will name function in trace
+  sayMyName('nate');
+
+</script>
+</body>
+</html>
