@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script >
+  const key = 'abc123';
+  let points = 50;
+  let winner = false;
+  console.log('outer: ' + winner);
+  if(points > 40) {
+    let winner = true;
+    console.log('inner: ' + winner);
+  }
+</script>
+
+</body>
+</html>
